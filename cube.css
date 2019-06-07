@@ -11,6 +11,7 @@
   --DDG:var(--Xdeg)+0deg;
 --BgColor:rgba(100,100,100,0.8);
 }
+
 body{
   background-color:var(--BgColor);
 }
@@ -26,7 +27,8 @@ body{
   font-size: 12.5%;
 }
 .face {
-  box-shadow: var(--f-shadow)
+  box-shadow: var(--f-shadow);
+
 }
 .scene, .shape, .face, .face-wrapper, .cr {
   position: absolute;
@@ -59,33 +61,31 @@ body{
   overflow: hidden;
   transform-origin: 0 0;
   backface-visibility: hidden;
+  background-color: black
   /* hidden by default, prevent blinking and other weird rendering glitchs */
 }
 .face {
-  background-size:100%;
-  background-position: center;
-  background-color: black;
- background-image:  linear-gradient(rgb(157, 189, 242) 13%, rgb(95, 175, 159) 42%, rgb(219, 221, 70) 71%);
+visibility: hidden;
+background: transparent;
+ /* background-image:  linear-gradient(rgb(157, 189, 242) 13%, rgb(95, 175, 159) 42%, rgb(219, 221, 70) 71%); */
 }
 #img{
 width:100%;
 Height:100%;
-background-color:transparent;
+
 box-shadow:inset 2px 2px 10px black;
 }
 .face-wrapper .face {
-  left: 100%;
-  top:50%;
-  width: 50%;
-  height: 50%
+
+  width: 100%;
+  height: 100%;
 }
 .photon-shader {
   position: absolute;
   background-color: rgba(0, 100,0, 0.008);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%
+  background-position: center;
+  
+
 }
 .side {
   left: 50%;

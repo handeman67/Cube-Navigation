@@ -3,10 +3,7 @@
 // import ondrag from 'ondrag'
 var flag = 0
 var element = null
-var mouse = {
-  x: 0,
-  y: 0
-}
+var X,Y;
 var elem = document.getElementById('div1');
 
 window.addEventListener('deviceorientation', function (e) {
@@ -69,13 +66,16 @@ function Size (value) {
 // }, false)
 
 Mmove1 = function (e) {
+  mouse = {
+  x: 0,
+  y: 0
+}
   if (window.event) e = window.event
-  this.mouse.x = e.clientX
-  this.mouse.y = e.clientY
-  let MouseX = this.mouse.x
-  let MouseY = this.mouse.y
-  document.innerHtml = ('X=' + MouseX + 'Y=' + MouseY)
-  return false
+  X=mouse.x = e.clientX
+  Y=mouse.y = e.clientY 
+  let mousecoord=document.getElementById('demo')
+  mousecoord.innerHTML =(X+Y)
+  return e
 }
 
 // class butn {
